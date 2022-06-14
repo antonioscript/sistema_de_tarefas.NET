@@ -1,0 +1,41 @@
+@model MyTodoApp.Models.Todo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Título)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Título)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Concluído)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Concluído)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Criação)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Criação)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Atualização)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Atualização)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

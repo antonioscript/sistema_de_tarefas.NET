@@ -1,0 +1,53 @@
+@model IEnumerable<MyTodoApp.Models.Todo>
+
+@{
+    ViewData["Title"] = "Tarefas";
+}
+
+<h1>Tarefas Cadastradas</h1>
+
+<p>
+    <a asp-action="Create">Criar Nova Tarefa</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Título)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concluído)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Criação)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Atualização)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Título)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Concluído)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Criação)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Atualização)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
