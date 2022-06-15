@@ -53,3 +53,6 @@ Vantagens da aplicação:
 # Excluir
 ![image](https://user-images.githubusercontent.com/10932478/173901929-3d0f0b2e-a78b-4eb7-a667-ce28ccbd2e03.png)
 </br> E por fim, o usuário pode também clicar em 'Excluir' Removendo assim todas as informações daquele tarefa do banco de dados.
+
+# Link do Projeto
+https://github.com/antonioscript/sistema_de_tarefas.NET/tree/main/MyTodoApp
